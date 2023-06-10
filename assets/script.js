@@ -20,8 +20,11 @@ var answerButton;
 //init///////////////////////////////
 
 function initialize() {
-
+    //create starting screen elements
+    //
 }
+
+initialize();
 
 //main quiz logic///////////////////////////////
 
@@ -36,6 +39,14 @@ function endQuiz() {
     //display button for retry
 }
 
+function checkAnswer() {
+    if (answerIsCorrect){
+        correctAnswer();
+    } else {
+        wrongAnswer();
+    }
+}
+
 function correctAnswer() {
     //display text correct
     //load next question - render question
@@ -45,6 +56,7 @@ function wrongAnswer() {
     time = time - penalty;
     //display text incorrect
 }
+
 
 function generateQuestions() {
 
@@ -75,17 +87,35 @@ function answerTextDelayTimer() {
 //save retrieve local data///////////////////////////////
 
 function saveHighscore() {
-
+    //sort highscores
     highScoreEntry.saveName = highScoreName.value;
+
     highScoreEntry.score = timeLeft;
+
+    highScoreList.push(highScoreEntry);
+
+    highScoreList.sort((a, b) => a.score - b.score);
+
     localStorage.setItem("highScoreList", JSON.stringify(highScoreList));
 }
 
+var highScoreEntry = {
+    saveName: "",
+    score: 0
+}
+
+
 //render elements///////////////////////////////
+
+function renderQuizIntro() {
+    
+}
 
 function renderHighscoreScreen() {
     //clear screen
-    
+    //retrieve highscore list from local storage
+    //create elements
+
 }
 
 function renderQuestion() {
@@ -98,12 +128,12 @@ function clearScreen() {
 
 //event listeners///////////////////////////////
 
-startButton.addEventListener("click");
-highscoresButton.addEventListener("click");
-resetScoreButton.addEventListener("click");
-restartButton.addEventListener("click");
-answerButton.addEventListener("click");
-highScoreName.addEventListener("submit");
+startButton.addEventListener("click", startQuiz());
+highscoresButton.addEventListener("click", renderHighscoreScreen());
+resetScoreButton.addEventListener("click", resetScores());
+restartButton.addEventListener("click", restartQuiz());
+answerButton.addEventListener("click", checkAnswer()); 
+highScoreName.addEventListener("submit", saveHighscore());
 
 //data///////////////////////////////
 
@@ -131,8 +161,5 @@ var questionData4 = {
     wrongAnswer: ["wrong text1","wrong text2","wrong text3"]
 }
 
-var highScoreEntry = {
-    saveName: highScoreName,
-    score: timeLeft
-}
+var questions = [questionData1, questionData2, questionData3, questionData4];
 
