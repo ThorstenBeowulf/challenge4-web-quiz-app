@@ -1,8 +1,22 @@
 * {
+    background-color: dimgray;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* div {
+body  {
+    display: flex;
+}
 
-} */
+body > element {
+    flex: 0 auto;
+    margin: auto;
+}
+
+.highscores, .timer {
+    width: 20vw;
+}
+
+.timer > div {
+    float: right;
+}
