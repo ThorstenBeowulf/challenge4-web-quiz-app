@@ -13,6 +13,10 @@ The goals of this project were to create a front-end only quiz app in javascript
 
 ## Deployed site
 
+The deployed site is avaiable at: https://thorstenbeowulf.github.io/challenge4-web-quiz-app/
+
+![image](https://github.com/ThorstenBeowulf/challenge4-web-quiz-app/assets/90459268/3cf17bd9-9d68-4439-9c2d-95db999a0b61)
+
 
 ## Acknowledgements
 
