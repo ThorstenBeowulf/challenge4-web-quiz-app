@@ -18,4 +18,9 @@ The goals of this project were to create a front-end only quiz app in javascript
 
 The random shuffle code was copied from the user coolaj86 on stackoverflow: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 
-##Copyright
+##Copyright and Licencing
+
+All original work in this repository is Copyright (c) 2023 Thorsten Beowulf.
+
+reproduction is under an MIT licence.
+
