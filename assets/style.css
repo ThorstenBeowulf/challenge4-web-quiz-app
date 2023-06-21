@@ -1,5 +1,5 @@
 * {
-    background-color: dimgray;
+    background-color: rgb(222, 222, 222);
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -17,6 +17,27 @@ body > element {
     width: 20vw;
 }
 
+.timer {
+    
+}
+
 .timer > div {
     float: right;
+}
+
+.answer-result-text {
+    border-top: 1px;
+}
+
+
+.main-form {
+    margin: auto;
+    padding: 10px;
+}
+
+.answer-button {
+    border-radius: 5px;
+    background-color: rgb(189, 100, 237);
+    border-color: none;
+    color: white;
 }
